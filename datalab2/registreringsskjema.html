@@ -26,12 +26,12 @@
 
         <!-- Alder -->
         <label for="Alder">Alder:</label>
-        <input type="number" id="Alder" name="fodselsdato" type="number" min="18" max="99" required>
+        <input type="number" id="Alder" name="Alder" min="18" max="99" required>
         <br><br>
 
         <!-- Telefonnummer -->
         <label for="Telefonnummer">Telefonnummer:</label>
-        <input type="number" id="Telefonnummer" name="Telefonnummer" pattern="[0-9]{8,12}" required>
+        <input type="tel" id="Telefonnummer" name="Telefonnummer" pattern="[0-9]{8,12}" required>
         <br><br>
 
         <!-- Fødselsdato -->
@@ -40,12 +40,13 @@
         <br><br>
 
         <!-- Kjønn -->
+        <label>Kjønn:</label>
         Mann
-        <input type="radio" name="valg">
+        <input type="radio" name="kjonn" value="Mann" required>
         Kvinne
-        <input type="radio" name="valg">
+        <input type="radio" name="kjonn" value="Kvinne" required>
         Annet
-        <input type="radio" name="valg">
+        <input type="radio" name="kjonn" value="Annet" required>
         <br><br>
 
         <!-- Land -->
