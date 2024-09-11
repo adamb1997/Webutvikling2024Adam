@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registreringsskjema</title>
+</head>
+
+<body>
+    <h1>Registreringsskjema</h1>
+    <form method="post">
+        <!-- Navn -->
+        <label for="Navn">Navn:</label>
+        <input type="text" name="Navn" id="Navn" pattern="[A-Za-zæøåÆØÅ ]{2,}" maxlength="30" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="Email">Email:</label>
+        <input type="email" name="Email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <br><br>
+
+        <!-- Passord -->
+        <label for="passord">Passord:</label>
+        <input type="password" id="passord" name="passord" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+        <br><br>
+
+        <!-- Alder -->
+        <label for="Alder">Alder:</label>
+        <input type="number" id="Alder" name="fodselsdato" type="number" min="18" max="99" required>
+        <br><br>
+
+        <!-- Telefonnummer -->
+        <label for="Telefonnummer">Telefonnummer:</label>
+        <input type="number" id="Telefonnummer" name="Telefonnummer" pattern="[0-9]{8,12}" required>
+        <br><br>
+
+        <!-- Fødselsdato -->
+        <label for="Fødselsdato">Fødselsdato:</label>
+        <input type="date" id="Fødselsdato" name="Fødselsdato" max="2023-12-31" required>
+        <br><br>
+
+        <!-- Kjønn -->
+        Mann
+        <input type="radio" name="valg">
+        Kvinne
+        <input type="radio" name="valg">
+        Annet
+        <input type="radio" name="valg">
+        <br><br>
+
+        <!-- Land -->
+        <label for="land">Land: </label>
+        <select id="land" name="land" required>
+            <option value="">Velg et land</option>
+            <option value="Norge">Norge</option>
+            <option value="Sverige">Sverige</option>
+            <option value="Danmark">Danmark</option>
+        </select>
+        <br><br>
+
+        <!-- Personvern -->
+        <input type="checkbox" name="personvern" required> Jeg godtar personvernreglene
+        <br><br>
+
+        <!-- Submit-knapp -->
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
